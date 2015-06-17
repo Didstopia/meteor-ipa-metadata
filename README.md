@@ -1,14 +1,23 @@
-# AdmZip
+# ipa-metadata
 
-[![Build Status](https://travis-ci.org/Didstopia/meteor-admzip.svg)](https://travis-ci.org/Didstopia/meteor-admzip)
+[![Build Status](https://travis-ci.org/Didstopia/meteor-ipa-metadata.svg)](https://travis-ci.org/Didstopia/meteor-ipa-metadata)
 
-Provides easy access to AdmZip.
+Provides convenient access to [ipa-metadata](https://github.com/matiassingers/ipa-metadata).
 
-Create a ZIP file from a single file:
-createZipFromFile("thing.txt", "something.zip");
+## Usage
 
-Create ZIP file from multiple files:
-createZipFromFiles([ "this.txt", "that.txt" ], "something.zip");
-
-Extract a ZIP file (from path -> to path):
-extractZip("something.zip", "some/folder");
+```js
+ipaMetadata('Facebook.ipa', function(error, data) {
+  console.log(data);
+  
+  // { metadata: 
+  //    { CFBundleName: 'Facebook',
+  //      ... },
+  //   provisioning:
+  //    { TeamName: 'Facebook Inc.',
+  //      ... } },
+  //   entitlements:
+  //    { application-identifier: '1234abcd.com.facebook.facebook.',
+  //      ... } }
+});
+```
