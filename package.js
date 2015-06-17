@@ -2,7 +2,7 @@ Package.describe(
 {
   name: 'didstopia:ipa-metadata',
   summary: 'Provides easy access to ipa-metadata.',
-  version: '0.0.2',
+  version: '0.0.3',
   git: 'https://github.com/Didstopia/meteor-ipa-metadata.git',
   documentation: 'README.md',
   packages:

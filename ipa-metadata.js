@@ -1,4 +1,1 @@
-ipaMetadata = function()
-{
-  return Npm.require('ipa-metadata');;
-};
+ipaMetadata = Npm.require('ipa-metadata');
